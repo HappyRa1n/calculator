@@ -141,7 +141,6 @@ namespace Сalculator
             ClickEnterMonth(true);
         }
 
-<<<<<<< HEAD
         private void EnterMonth_Click(object sender, EventArgs e)
         {
             Form3 newForm = new Form3(this);
@@ -150,11 +149,6 @@ namespace Сalculator
             {
 
             }
-=======
-        private void ResDate_Click(object sender, EventArgs e)
-        {
-
->>>>>>> Develop
         }
     }
 }
