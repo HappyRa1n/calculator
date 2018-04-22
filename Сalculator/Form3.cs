@@ -31,41 +31,46 @@ namespace Сalculator
         }
         private void button1_Click(object sender, EventArgs e )
         {
-            
             string st;
             st = textBox1.Text;
-            int t = Convert.ToInt32(st);
-
-            if (t >= 1)
+            try
             {
-                if (!frm.flag)
+                int t = Convert.ToInt32(st);
+                if (t >= 1)
                 {
-                    frm.EnterText(textBox1.Text);//вводим дату в основную форму
-                    frm.EnableTypeOfDate(false);
-                    frm.ClickEntDate(false);
-                    frm.ClickMinus(true);
-                    frm.ClickPlus(true);
-                    frm.ClickEnterDays(false);
-                    frm.ClickEnterMonth(false);
+                    if (!frm.flag)
+                    {
+                        frm.EnterText(textBox1.Text);//вводим дату в основную форму
+                        frm.EnableTypeOfDate(false);
+                        frm.ClickEntDate(false);
+                        frm.ClickMinus(true);
+                        frm.ClickPlus(true);
+                        frm.ClickEnterDays(false);
+                        frm.ClickEnterMonth(false);
+                    }
+                    else
+                    {
+                        frm.ClickEntDate(false);
+                        frm.EnterText(textBox1.Text);
+                        frm.ClickEnterDays(false);
+                        frm.ClickEnterMonth(false);
+                        frm.ClickResDays(true);
+                        frm.ClickResHours(true);
+                        frm.ClickResMinutes(true);
+                        frm.ClickResMonth(true);
+                        frm.ClickResWeeks(true);
+                        frm.ClickResSecond(true);
+                    }
+                    Close();
                 }
                 else
                 {
-                    frm.ClickEntDate(false);
-                    frm.EnterText(textBox1.Text);
-                    frm.ClickEnterDays(false);
-                    frm.ClickEnterMonth(false);
-                    frm.ClickResDays(true);
-                    frm.ClickResHours(true);
-                    frm.ClickResMinutes(true);
-                    frm.ClickResMonth(true);
-                    frm.ClickResWeeks(true);
-                    frm.ClickResSecond(true);
+                    MessageBox.Show("Ошибка! Введен неверный формат даты!");//вызываем окно ошибки
                 }
-                Close();
             }
-            else
+            catch (System.OverflowException)
             {
-                MessageBox.Show("Ошибка! Введен неверный формат даты!" );//вызываем окно ошибки
+                MessageBox.Show("Ошибка! Введен неверный формат даты!");//вызываем окно ошибки
             }
         }
 
