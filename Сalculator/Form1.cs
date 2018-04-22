@@ -140,5 +140,15 @@ namespace Сalculator
             ClickEnterDays(true);
             ClickEnterMonth(true);
         }
+
+        private void EnterMonth_Click(object sender, EventArgs e)
+        {
+            Form3 newForm = new Form3(this);
+            newForm.ShowDialog();//подключаем форму ввода даты
+            if (flag == true)
+            {
+
+            }
+        }
     }
 }
