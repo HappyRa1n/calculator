@@ -25,7 +25,7 @@ namespace Сalculator
 
 
         }
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -33,14 +33,14 @@ namespace Сalculator
         {
             
             string st;
-            st = maskedTextBox1.Text;
+            st = textBox1.Text;
             int t = Convert.ToInt32(st);
 
             if (t >= 1)
             {
                 if (!frm.flag)
                 {
-                    frm.EnterText(maskedTextBox1.Text);//вводим дату в основную форму
+                    frm.EnterText(textBox1.Text);//вводим дату в основную форму
                     frm.EnableTypeOfDate(false);
                     frm.ClickEntDate(false);
                     frm.ClickMinus(true);
@@ -51,7 +51,7 @@ namespace Сalculator
                 else
                 {
                     frm.ClickEntDate(false);
-                    frm.EnterText(maskedTextBox1.Text);
+                    frm.EnterText(textBox1.Text);
                     frm.ClickEnterDays(false);
                     frm.ClickEnterMonth(false);
                     frm.ClickResDays(true);
@@ -67,6 +67,8 @@ namespace Сalculator
             {
                 MessageBox.Show("Ошибка! Введен неверный формат даты!" );//вызываем окно ошибки
             }
-        }        
+        }
+
+        
     }
 }
