@@ -140,5 +140,10 @@ namespace Сalculator
             ClickEnterDays(true);
             ClickEnterMonth(true);
         }
+
+        private void ResDate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

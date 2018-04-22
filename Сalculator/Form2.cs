@@ -44,7 +44,7 @@ namespace Сalculator
               st = date.Text.Substring(3, 3) + date.Text.Substring(0, 2) + date.Text.Substring(5, 5);//переводим в американский формат мм.дд.гггг
             }
                 bool b = DateTime.TryParse(st, out d);
-                if (b == true)
+                if (b == true&&!date.Text.Contains(" ")&&date.Text.Length==10)
                 {
                 if (!frm.flag)
                 {
