@@ -290,7 +290,18 @@ namespace Сalculator
             try
             {
                 f = date1.Subtract(date2);
-                Result.Text = Convert.ToString(f.Days)+"Д";
+                int q;
+                q = Convert.ToInt32(f.Days);
+                if (q > 0)
+                {
+                    Result.Text = Convert.ToString(f.Days) + " д";
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+                }
+               
+                
             }
             catch (System.ArgumentOutOfRangeException)//ошибка выхода за пределы возможных  дат
             {
