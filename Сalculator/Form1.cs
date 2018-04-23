@@ -277,15 +277,16 @@ namespace Сalculator
                 f = date1.Subtract(date2);
                 int q;
                 q = Convert.ToInt32(f.Days);
-                double qq;
+                double qq,qqq;
                 qq = q / 30;
+                qqq = q % 30;
                 if (q >= 0)
                 {
-                    Result.Text = Convert.ToString(qq) + " м";
+                    Result.Text = Convert.ToString(qq)+"," +Convert.ToString(qqq)+ " м";
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+                    MessageBox.Show("Ошибка! Первая дата меньше второй!");
                 }
 
 
@@ -337,7 +338,7 @@ namespace Сalculator
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка! Первая дата меньше второй");
+                    MessageBox.Show("Ошибка! Первая дата меньше второй!");
                 }
                
                 
