@@ -332,7 +332,7 @@ namespace Сalculator
                 qqq = q % 7;
                 if (q >= 0)
                 {
-                    Result.Text = Convert.ToString(qq) + "," + Convert.ToString(qqq) + " м";
+                    Result.Text = Convert.ToString(qq) + "," + Convert.ToString(qqq) + " н";
                 }
                 else
                 {
