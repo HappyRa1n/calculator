@@ -84,7 +84,7 @@ namespace Сalculator
                             ClickResMonth(false);
                             ClickResWeeks(false);
                             ClickResSecond(false);
-
+                            Result.Text = "";
                             tmp = t.Substring(0, 11);
                         }
                         else
