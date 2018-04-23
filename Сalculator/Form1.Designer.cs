@@ -128,6 +128,7 @@
             this.ResDate.TabIndex = 12;
             this.ResDate.Text = "=Дата";
             this.ResDate.UseVisualStyleBackColor = true;
+            this.ResDate.Click += new System.EventHandler(this.ResDate_Click);
             // 
             // ResMinutes
             // 

@@ -47,7 +47,7 @@ namespace Сalculator
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка!Введено не натуральное число месяцев!");//вызываем окно ошибки
+                    MessageBox.Show("Ошибка!Введено некорректное или слишком большое число месяцев!");//вызываем окно ошибки
                 }
             }
             catch (System.OverflowException)
@@ -57,10 +57,7 @@ namespace Сalculator
             catch (System.FormatException)
             {
                 MessageBox.Show("Ошибка! Вы ввели не число!");
-            }
- 
-        }
-
-        
+            } 
+        }   
     }
 }
