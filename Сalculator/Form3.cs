@@ -38,39 +38,25 @@ namespace Сalculator
                 int t = Convert.ToInt32(st);
                 if (t >= 1)
                 {
-                    if (!frm.flag)
-                    {
-                        frm.EnterText(textBox1.Text);//вводим дату в основную форму
-                        frm.EnableTypeOfDate(false);
-                        frm.ClickEntDate(false);
-                        frm.ClickMinus(true);
-                        frm.ClickPlus(true);
-                        frm.ClickEnterDays(false);
-                        frm.ClickEnterMonth(false);
-                    }
-                    else
-                    {
-                        frm.ClickEntDate(false);
-                        frm.EnterText(textBox1.Text);
-                        frm.ClickEnterDays(false);
-                        frm.ClickEnterMonth(false);
-                        frm.ClickResDays(true);
-                        frm.ClickResHours(true);
-                        frm.ClickResMinutes(true);
-                        frm.ClickResMonth(true);
-                        frm.ClickResWeeks(true);
-                        frm.ClickResSecond(true);
-                    }
+                    frm.EnterText(textBox1.Text + "м");//вводим дни в основную форму
+                    frm.ClickResDate(true);
+                    frm.ClickEntDate(false);
+                    frm.ClickEnterDays(false);
+                    frm.ClickEnterMonth(false);
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка! Введен неверный формат даты!");//вызываем окно ошибки
+                    MessageBox.Show("Ошибка!Введено не натуральное число месяцев!");//вызываем окно ошибки
                 }
             }
             catch (System.OverflowException)
             {
-                MessageBox.Show("Ошибка! Введен неверный формат даты!");//вызываем окно ошибки
+                MessageBox.Show("Ошибка! Вы ввели слишком большое число!");//вызываем окно ошибки
+            }
+            catch (System.FormatException)
+            {
+                MessageBox.Show("Ошибка! Вы ввели не число!");
             }
         }
 
