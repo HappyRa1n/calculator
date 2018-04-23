@@ -11,12 +11,12 @@ using System.Windows.Forms;
 namespace Сalculator
 {
     public partial class Form3 : Form
-    {        
+    {
         Form1 frm;
         public Form3()
         {
             InitializeComponent();
-            
+
         }
         public Form3(Form1 f)
         {
@@ -29,7 +29,7 @@ namespace Сalculator
         {
 
         }
-        private void button1_Click(object sender, EventArgs e )
+        private void button1_Click(object sender, EventArgs e)
         {
             string st;
             st = textBox1.Text;
@@ -38,26 +38,42 @@ namespace Сalculator
                 int t = Convert.ToInt32(st);
                 if (t >= 1)
                 {
-                        frm.EnterText(textBox1.Text+"м");//вводим месяц в основную форму
-                        frm.ClickResDate(true);
+                    if (!frm.flag)
+                    {
+                        frm.EnterText(textBox1.Text);//вводим дату в основную форму
+                        frm.EnableTypeOfDate(false);
                         frm.ClickEntDate(false);
+                        frm.ClickMinus(true);
+                        frm.ClickPlus(true);
                         frm.ClickEnterDays(false);
                         frm.ClickEnterMonth(false);
+                    }
+                    else
+                    {
+                        frm.ClickEntDate(false);
+                        frm.EnterText(textBox1.Text);
+                        frm.ClickEnterDays(false);
+                        frm.ClickEnterMonth(false);
+                        frm.ClickResDays(true);
+                        frm.ClickResHours(true);
+                        frm.ClickResMinutes(true);
+                        frm.ClickResMonth(true);
+                        frm.ClickResWeeks(true);
+                        frm.ClickResSecond(true);
+                    }
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка!Введено некорректное или слишком большое число месяцев!");//вызываем окно ошибки
+                    MessageBox.Show("Ошибка! Введен неверный формат даты!");//вызываем окно ошибки
                 }
             }
             catch (System.OverflowException)
             {
-                MessageBox.Show("Ошибка! Вы ввели слишком большое число!");//вызываем окно ошибки
+                MessageBox.Show("Ошибка! Введен неверный формат даты!");//вызываем окно ошибки
             }
-            catch (System.FormatException)
-            {
-                MessageBox.Show("Ошибка! Вы ввели не число!");
-            } 
-        }   
+        }
+
+
     }
 }
