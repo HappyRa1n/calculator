@@ -58,10 +58,6 @@ namespace Сalculator
         {
             Form2 newForm = new Form2(this);
             newForm.ShowDialog();//подключаем форму ввода даты
-            if (flag == true)
-            {
-
-            }
         }
         public void ClickResDate(bool b1)
         {
@@ -141,9 +137,16 @@ namespace Сalculator
             ClickEnterMonth(true);
         }
 
-        private void ResDate_Click(object sender, EventArgs e)
+        private void EnterMonth_Click(object sender, EventArgs e)
         {
+            Form3 newForm = new Form3(this);
+            newForm.ShowDialog();//подключаем форму ввода месяца
+        }
 
+        private void EnterDays_Click(object sender, EventArgs e)
+        {
+            Form4 newForm = new Form4(this);
+            newForm.ShowDialog();//подключаем форму ввода дней
         }
     }
 }

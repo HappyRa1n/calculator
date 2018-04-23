@@ -50,16 +50,17 @@
             // EnterT
             // 
             this.EnterT.Font = new System.Drawing.Font("Times New Roman", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EnterT.Location = new System.Drawing.Point(74, 70);
+            this.EnterT.Location = new System.Drawing.Point(75, 69);
+            this.EnterT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EnterT.Name = "EnterT";
             this.EnterT.ReadOnly = true;
-            this.EnterT.Size = new System.Drawing.Size(536, 62);
+            this.EnterT.Size = new System.Drawing.Size(537, 62);
             this.EnterT.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(783, 9);
+            this.label1.Location = new System.Drawing.Point(784, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 32);
             this.label1.TabIndex = 2;
@@ -70,7 +71,8 @@
             // 
             this.minus.Enabled = false;
             this.minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minus.Location = new System.Drawing.Point(365, 170);
+            this.minus.Location = new System.Drawing.Point(365, 169);
+            this.minus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minus.Name = "minus";
             this.minus.Size = new System.Drawing.Size(184, 162);
             this.minus.TabIndex = 5;
@@ -82,7 +84,8 @@
             // 
             this.plus.Enabled = false;
             this.plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.plus.Location = new System.Drawing.Point(365, 395);
+            this.plus.Location = new System.Drawing.Point(365, 396);
+            this.plus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plus.Name = "plus";
             this.plus.Size = new System.Drawing.Size(184, 162);
             this.plus.TabIndex = 6;
@@ -94,7 +97,8 @@
             // 
             this.ResMonth.Enabled = false;
             this.ResMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResMonth.Location = new System.Drawing.Point(659, 395);
+            this.ResMonth.Location = new System.Drawing.Point(659, 396);
+            this.ResMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResMonth.Name = "ResMonth";
             this.ResMonth.Size = new System.Drawing.Size(184, 162);
             this.ResMonth.TabIndex = 8;
@@ -105,7 +109,8 @@
             // 
             this.ResDays.Enabled = false;
             this.ResDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResDays.Location = new System.Drawing.Point(365, 616);
+            this.ResDays.Location = new System.Drawing.Point(365, 615);
+            this.ResDays.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResDays.Name = "ResDays";
             this.ResDays.Size = new System.Drawing.Size(184, 162);
             this.ResDays.TabIndex = 11;
@@ -116,19 +121,20 @@
             // 
             this.ResDate.Enabled = false;
             this.ResDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResDate.Location = new System.Drawing.Point(659, 170);
+            this.ResDate.Location = new System.Drawing.Point(659, 169);
+            this.ResDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResDate.Name = "ResDate";
             this.ResDate.Size = new System.Drawing.Size(184, 162);
             this.ResDate.TabIndex = 12;
             this.ResDate.Text = "=Дата";
             this.ResDate.UseVisualStyleBackColor = true;
-            this.ResDate.Click += new System.EventHandler(this.ResDate_Click);
             // 
             // ResMinutes
             // 
             this.ResMinutes.Enabled = false;
             this.ResMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResMinutes.Location = new System.Drawing.Point(921, 395);
+            this.ResMinutes.Location = new System.Drawing.Point(920, 396);
+            this.ResMinutes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResMinutes.Name = "ResMinutes";
             this.ResMinutes.Size = new System.Drawing.Size(184, 162);
             this.ResMinutes.TabIndex = 13;
@@ -139,7 +145,8 @@
             // 
             this.ResWeeks.Enabled = false;
             this.ResWeeks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResWeeks.Location = new System.Drawing.Point(659, 616);
+            this.ResWeeks.Location = new System.Drawing.Point(659, 615);
+            this.ResWeeks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResWeeks.Name = "ResWeeks";
             this.ResWeeks.Size = new System.Drawing.Size(184, 162);
             this.ResWeeks.TabIndex = 14;
@@ -150,7 +157,8 @@
             // 
             this.ResSeconds.Enabled = false;
             this.ResSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResSeconds.Location = new System.Drawing.Point(921, 170);
+            this.ResSeconds.Location = new System.Drawing.Point(920, 169);
+            this.ResSeconds.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResSeconds.Name = "ResSeconds";
             this.ResSeconds.Size = new System.Drawing.Size(184, 162);
             this.ResSeconds.TabIndex = 15;
@@ -161,7 +169,8 @@
             // 
             this.ResHours.Enabled = false;
             this.ResHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResHours.Location = new System.Drawing.Point(921, 616);
+            this.ResHours.Location = new System.Drawing.Point(920, 615);
+            this.ResHours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResHours.Name = "ResHours";
             this.ResHours.Size = new System.Drawing.Size(184, 162);
             this.ResHours.TabIndex = 16;
@@ -171,28 +180,33 @@
             // EnterDays
             // 
             this.EnterDays.Enabled = false;
-            this.EnterDays.Location = new System.Drawing.Point(74, 616);
+            this.EnterDays.Location = new System.Drawing.Point(75, 615);
+            this.EnterDays.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EnterDays.Name = "EnterDays";
-            this.EnterDays.Size = new System.Drawing.Size(206, 162);
+            this.EnterDays.Size = new System.Drawing.Size(205, 162);
             this.EnterDays.TabIndex = 10;
             this.EnterDays.Text = "Ввести к-во дней";
             this.EnterDays.UseVisualStyleBackColor = true;
+            this.EnterDays.Click += new System.EventHandler(this.EnterDays_Click);
             // 
             // EnterMonth
             // 
             this.EnterMonth.Enabled = false;
-            this.EnterMonth.Location = new System.Drawing.Point(74, 395);
+            this.EnterMonth.Location = new System.Drawing.Point(75, 396);
+            this.EnterMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EnterMonth.Name = "EnterMonth";
-            this.EnterMonth.Size = new System.Drawing.Size(206, 162);
+            this.EnterMonth.Size = new System.Drawing.Size(205, 162);
             this.EnterMonth.TabIndex = 9;
             this.EnterMonth.Text = "Ввести к-во месяцев";
             this.EnterMonth.UseVisualStyleBackColor = true;
+            this.EnterMonth.Click += new System.EventHandler(this.EnterMonth_Click);
             // 
             // EnterData
             // 
-            this.EnterData.Location = new System.Drawing.Point(74, 170);
+            this.EnterData.Location = new System.Drawing.Point(75, 169);
+            this.EnterData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EnterData.Name = "EnterData";
-            this.EnterData.Size = new System.Drawing.Size(206, 162);
+            this.EnterData.Size = new System.Drawing.Size(205, 162);
             this.EnterData.TabIndex = 4;
             this.EnterData.Text = "Ввести дату";
             this.EnterData.UseVisualStyleBackColor = true;
@@ -204,17 +218,19 @@
             this.FormatData.Items.AddRange(new object[] {
             "Российский формат даты",
             "Американский Формат даты"});
-            this.FormatData.Location = new System.Drawing.Point(74, 12);
+            this.FormatData.Location = new System.Drawing.Point(75, 12);
+            this.FormatData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FormatData.Name = "FormatData";
             this.FormatData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.FormatData.Size = new System.Drawing.Size(459, 39);
+            this.FormatData.Size = new System.Drawing.Size(460, 39);
             this.FormatData.TabIndex = 17;
             this.FormatData.Text = "Российский формат даты";
             this.FormatData.SelectedIndexChanged += new System.EventHandler(this.FormatData_SelectedIndexChanged);
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(617, 70);
+            this.Delete.Location = new System.Drawing.Point(616, 69);
+            this.Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 62);
             this.Delete.TabIndex = 18;
@@ -225,7 +241,8 @@
             // Result
             // 
             this.Result.Font = new System.Drawing.Font("Times New Roman", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Result.Location = new System.Drawing.Point(789, 70);
+            this.Result.Location = new System.Drawing.Point(789, 69);
+            this.Result.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Result.Name = "Result";
             this.Result.ReadOnly = true;
             this.Result.Size = new System.Drawing.Size(316, 62);
@@ -235,7 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 881);
+            this.ClientSize = new System.Drawing.Size(1173, 880);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.FormatData);
             this.Controls.Add(this.ResHours);
@@ -253,6 +270,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.EnterT);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
