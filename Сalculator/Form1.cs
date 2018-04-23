@@ -268,9 +268,9 @@ namespace Сalculator
             {
                 TimeSpan diff1 = d.Subtract(b); //ищем разницу между 2 датами
                 double time = Math.Abs(diff1.TotalSeconds); //переводим разницу в секунды
-                Result.Text = time.ToString();
+                Result.Text = time.ToString() + " с";
             }
-            else MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+            else MessageBox.Show("Ошибка! Первая дата раньше второй!");
         }
 
         private void ResMinutes_Click(object sender, EventArgs e)
@@ -298,9 +298,9 @@ namespace Сalculator
             {
                 TimeSpan diff1 = d.Subtract(b); //ищем разницу между 2 датами
                 double time = Math.Abs(diff1.TotalMinutes); //переводим разницу в минуты
-                Result.Text = time.ToString();
+                Result.Text = time.ToString() + " м";
             }
-            else MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+            else MessageBox.Show("Ошибка! Первая дата раньше второй!");
         }
 
         private void ResMonth_Click(object sender, EventArgs e)
@@ -373,9 +373,9 @@ namespace Сalculator
             {
                 TimeSpan diff1 = d.Subtract(b); //ищем разницу между 2 датами
                 double time = Math.Abs(diff1.TotalHours); //переводим разницу в часы
-                Result.Text = time.ToString();
+                Result.Text = time.ToString() + " ч";
             }
-            else MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+            else MessageBox.Show("Ошибка! Первая дата раньше второй!");
         }
 
         private void ResWeeks_Click(object sender, EventArgs e)
