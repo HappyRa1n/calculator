@@ -35,18 +35,66 @@ namespace Сalculator
             if (t != "")//проверяем наличие текста
             {
                 string tmp;
-                if (t[t.Length - 1] == '+' || t[t.Length - 1] == '-')
+                switch (t[t.Length - 1])
                 {
-                    ClickMinus(true);
-                    ClickPlus(true);
-                    ClickEnterMonth(false);
-                    ClickEnterDays(false);
-                    ClickEntDate(false);
-                    tmp = t.Substring(0, t.Length - 1);//удаляем поселдний знак
-                }
-                else
-                {
-                    tmp = t.Substring(0, t.Length - 10);//удаляем дату
+                    case '+':
+                        flag = false;
+                        ClickMinus(true);
+                        ClickPlus(true);
+                        ClickEnterMonth(false);
+                        ClickEnterDays(false);
+                        ClickEntDate(false);
+                        tmp = t.Substring(0, t.Length - 1);//удаляем поселдний знак
+                        break;
+                    case '-':
+                        flag = false;
+                        ClickMinus(true);
+                        ClickPlus(true);
+                        ClickEnterMonth(false);
+                        ClickEnterDays(false);
+                        ClickEntDate(false);
+                        tmp = t.Substring(0, t.Length - 1);//удаляем поселдний знак
+                        break;
+                    case 'д':
+                        ClickEnterMonth(true);
+                        ClickEnterDays(true);
+                        ClickResDate(false);
+                        if (t[10] == '-')
+                            ClickEntDate(true);
+                        tmp = t.Substring(0, 11);
+                        break;
+                    case 'м':
+                        ClickEnterMonth(true);
+                        ClickEnterDays(true);
+                        ClickResDate(false);
+                        if (t[10] == '-')
+                            ClickEntDate(true);
+                        tmp = t.Substring(0, 11);
+                        break;
+                    default:
+                        if (flag)
+                        {
+                            ClickEnterMonth(true);
+                            ClickEnterDays(true);
+                                if(t[10]=='-')//проверяем стоит минус или плюс
+                                ClickEntDate(true);
+                            ClickResDays(false);
+                            ClickResHours(false);
+                            ClickResMinutes(false);
+                            ClickResMonth(false);
+                            ClickResWeeks(false);
+                            ClickResSecond(false);
+
+                            tmp = t.Substring(0, 11);
+                        }
+                        else
+                        {
+                            ClickEntDate(true);
+                            ClickMinus(false);
+                            ClickPlus(false);
+                            tmp = "";
+                        }
+                        break;
                 }
                 EnterT.Text = tmp;
             }
