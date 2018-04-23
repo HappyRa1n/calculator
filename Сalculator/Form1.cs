@@ -148,5 +148,50 @@ namespace Сalculator
             Form4 newForm = new Form4(this);
             newForm.ShowDialog();//подключаем форму ввода дней
         }
+
+        private void ResDate_Click(object sender, EventArgs e)
+        {
+            string strDate;//переменная для временного хранения даты
+            string newDate;//переменная для конечной даты
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(3, 3) + EnterT.Text.Substring(0, 3) + EnterT.Text.Substring(6, 4);
+            }
+            else
+                strDate = EnterT.Text.Substring(0, 10);
+            DateTime d = new DateTime();//создаем перменную датетайм
+            d=DateTime.Parse(strDate);//переводим строку в датетайм
+            try
+            {
+                if (EnterT.Text[EnterT.Text.Length - 1] == 'д')//проверяем последний символ строки
+                {
+                    int NumDays = Convert.ToInt32(EnterT.Text.Substring(11, EnterT.Text.Length - 12));//выделяем к-во дней из строки
+                    if (EnterT.Text[10] == '-')//проверяем знак операции
+                    {
+                        NumDays = NumDays * (-1);//меняем знак
+                    }
+                    d = d.AddDays(NumDays);//добавляем или вычитаем дни
+                }
+                else
+                {
+                    int NumMonth = Convert.ToInt32(EnterT.Text.Substring(11, EnterT.Text.Length - 12));//выделяем к-во месяцев из строки
+                    if (EnterT.Text[10] == '-')//проверяем знак операции
+                    {
+                        NumMonth = NumMonth * (-1);//меняем знак
+                    }
+                    d = d.AddMonths(NumMonth);//добавляем или вычитаем месяцы
+                }
+                newDate = Convert.ToString(d.ToShortDateString());//записываем конечную дату
+                if (TypeData == false)//проверяем формат
+                {
+                    newDate = newDate.Substring(3, 3) + newDate.Substring(0, 3) + newDate.Substring(6, 4);
+                }
+                Result.Text = newDate;
+            }
+            catch(System.ArgumentOutOfRangeException)//ошибка выхода за пределы возможных  дат
+            {
+                MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+            }
+        }
     }
 }
