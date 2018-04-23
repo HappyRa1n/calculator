@@ -254,7 +254,47 @@ namespace Сalculator
 
         private void ResMonth_Click(object sender, EventArgs e)
         {
+            string strDate;//переменная для временного хранения даты
 
+            string strDate2;
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(3, 3) + EnterT.Text.Substring(0, 3) + EnterT.Text.Substring(6, 4);
+                strDate2 = EnterT.Text.Substring(14, 3) + EnterT.Text.Substring(11, 3) + EnterT.Text.Substring(17, 4);
+            }
+            else
+            {
+                strDate = EnterT.Text.Substring(0, 10);
+                strDate2 = EnterT.Text.Substring(11, 10);
+            }
+            DateTime date1 = new DateTime();//создаем перменную датетайм
+            DateTime date2 = new DateTime();//создаем перменную датетайм
+            date1 = DateTime.Parse(strDate);//переводим строку в датетайм
+            date2 = DateTime.Parse(strDate2);//переводим строку в датетайм
+            TimeSpan f;
+            try
+            {
+                f = date1.Subtract(date2);
+                int q;
+                q = Convert.ToInt32(f.Days);
+                double qq,qqq;
+                qq = q / 30;
+                qqq = q % 30;
+                if (q >= 0)
+                {
+                    Result.Text = Convert.ToString(qq)+"," +Convert.ToString(qqq)+ " м";
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка! Первая дата раньше второй!");
+                }
+
+
+            }
+            catch (System.ArgumentOutOfRangeException)//ошибка выхода за пределы возможных  дат
+            {
+                MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+            }
         }
 
         private void ResHours_Click(object sender, EventArgs e)
@@ -264,12 +304,89 @@ namespace Сalculator
 
         private void ResWeeks_Click(object sender, EventArgs e)
         {
+            string strDate;//переменная для временного хранения даты
 
+            string strDate2;
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(3, 3) + EnterT.Text.Substring(0, 3) + EnterT.Text.Substring(6, 4);
+                strDate2 = EnterT.Text.Substring(14, 3) + EnterT.Text.Substring(11, 3) + EnterT.Text.Substring(17, 4);
+            }
+            else
+            {
+                strDate = EnterT.Text.Substring(0, 10);
+                strDate2 = EnterT.Text.Substring(11, 10);
+            }
+            DateTime date1 = new DateTime();//создаем перменную датетайм
+            DateTime date2 = new DateTime();//создаем перменную датетайм
+            date1 = DateTime.Parse(strDate);//переводим строку в датетайм
+            date2 = DateTime.Parse(strDate2);//переводим строку в датетайм
+            TimeSpan f;
+            try
+            {
+                f = date1.Subtract(date2);
+                int q;
+                q = Convert.ToInt32(f.Days);
+                double qq, qqq;
+                qq = q / 7;
+                qqq = q % 7;
+                if (q >= 0)
+                {
+                    Result.Text = Convert.ToString(qq) + "," + Convert.ToString(qqq) + " н";
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка! Первая дата раньше второй!");
+                }
+
+
+            }
+            catch (System.ArgumentOutOfRangeException)//ошибка выхода за пределы возможных  дат
+            {
+                MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+            }
         }
 
         private void ResDays_Click(object sender, EventArgs e)
         {
+            string strDate;//переменная для временного хранения даты
 
+            string strDate2;
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(3, 3) + EnterT.Text.Substring(0, 3) + EnterT.Text.Substring(6, 4);
+                strDate2= EnterT.Text.Substring(14, 3)+ EnterT.Text.Substring(11, 3)+EnterT.Text.Substring(17, 4) ;
+            }
+            else
+            {
+                strDate = EnterT.Text.Substring(0, 10);
+                strDate2= EnterT.Text.Substring(11, 10);
+            }
+            DateTime date1 = new DateTime();//создаем перменную датетайм
+            DateTime date2 = new DateTime();//создаем перменную датетайм
+            date1 = DateTime.Parse(strDate);//переводим строку в датетайм
+            date2 = DateTime.Parse(strDate2);//переводим строку в датетайм
+            TimeSpan f;
+            try
+            {
+                f = date1.Subtract(date2);
+                int q;
+                q = Convert.ToInt32(f.Days);
+                if (q >= 0)
+                {
+                    Result.Text = Convert.ToString(f.Days) + " д";
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка! Первая дата раньше второй!");
+                }
+               
+                
+            }
+            catch (System.ArgumentOutOfRangeException)//ошибка выхода за пределы возможных  дат
+            {
+                MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+            }
         }
     }
 }
