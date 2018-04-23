@@ -59,6 +59,7 @@ namespace Сalculator
                         ClickEnterMonth(true);
                         ClickEnterDays(true);
                         ClickResDate(false);
+                        Result.Text = "";
                         if (t[10] == '-')
                             ClickEntDate(true);
                         tmp = t.Substring(0, 11);
@@ -67,6 +68,7 @@ namespace Сalculator
                         ClickEnterMonth(true);
                         ClickEnterDays(true);
                         ClickResDate(false);
+                        Result.Text = "";
                         if (t[10] == '-')
                             ClickEntDate(true);
                         tmp = t.Substring(0, 11);
@@ -84,7 +86,7 @@ namespace Сalculator
                             ClickResMonth(false);
                             ClickResWeeks(false);
                             ClickResSecond(false);
-
+                            Result.Text = "";
                             tmp = t.Substring(0, 11);
                         }
                         else
