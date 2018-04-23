@@ -241,5 +241,35 @@ namespace Сalculator
                 MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
             }
         }
+
+        private void ResSeconds_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResMinutes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResMonth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResHours_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResWeeks_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResDays_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

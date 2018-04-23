@@ -104,6 +104,7 @@
             this.ResMonth.TabIndex = 8;
             this.ResMonth.Text = "=Месяцы";
             this.ResMonth.UseVisualStyleBackColor = true;
+            this.ResMonth.Click += new System.EventHandler(this.ResMonth_Click);
             // 
             // ResDays
             // 
@@ -116,6 +117,7 @@
             this.ResDays.TabIndex = 11;
             this.ResDays.Text = "=Дни";
             this.ResDays.UseVisualStyleBackColor = true;
+            this.ResDays.Click += new System.EventHandler(this.ResDays_Click);
             // 
             // ResDate
             // 
@@ -141,6 +143,7 @@
             this.ResMinutes.TabIndex = 13;
             this.ResMinutes.Text = "=Минуты";
             this.ResMinutes.UseVisualStyleBackColor = true;
+            this.ResMinutes.Click += new System.EventHandler(this.ResMinutes_Click);
             // 
             // ResWeeks
             // 
@@ -153,6 +156,7 @@
             this.ResWeeks.TabIndex = 14;
             this.ResWeeks.Text = "=Недели";
             this.ResWeeks.UseVisualStyleBackColor = true;
+            this.ResWeeks.Click += new System.EventHandler(this.ResWeeks_Click);
             // 
             // ResSeconds
             // 
@@ -165,6 +169,7 @@
             this.ResSeconds.TabIndex = 15;
             this.ResSeconds.Text = "=Секунды";
             this.ResSeconds.UseVisualStyleBackColor = true;
+            this.ResSeconds.Click += new System.EventHandler(this.ResSeconds_Click);
             // 
             // ResHours
             // 
@@ -177,6 +182,7 @@
             this.ResHours.TabIndex = 16;
             this.ResHours.Text = "=Часы";
             this.ResHours.UseVisualStyleBackColor = true;
+            this.ResHours.Click += new System.EventHandler(this.ResHours_Click);
             // 
             // EnterDays
             // 
