@@ -244,12 +244,69 @@ namespace Сalculator
 
         private void ResSeconds_Click(object sender, EventArgs e)
         {
+            string strDate;//переменная для временного хранения даты
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(3, 3) + EnterT.Text.Substring(0, 3) + EnterT.Text.Substring(6, 4);
+            }
+            else
+                strDate = EnterT.Text.Substring(0, 10);
+            DateTime d = new DateTime();//создаем перменную датетайм d (первая дата)
+            d = DateTime.Parse(strDate);//переводим строку в датетайм
 
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(14, 3) + EnterT.Text.Substring(11, 3) + EnterT.Text.Substring(17, 4);
+            }
+            else
+                strDate = EnterT.Text.Substring(11, 10);
+            DateTime b = new DateTime();//создаем перменную датетайм b (вторая дата)
+            b = DateTime.Parse(strDate);//переводим строку в датетайм
+
+            int a = DateTime.Compare(d, b); //переменная для определения правильности записи дат 
+            if (a > 0)
+            {
+                TimeSpan diff1 = d.Subtract(b); //ищем разницу между 2 датами
+                double time = Math.Abs(diff1.TotalSeconds); //переводим разницу в секунды
+                Result.Text = time.ToString() + " с";
+            }
+            else
+                if (a == 0)
+                Result.Text ="0 с";
+                else MessageBox.Show("Ошибка! Первая дата раньше второй!");
         }
 
         private void ResMinutes_Click(object sender, EventArgs e)
         {
+            string strDate;//переменная для временного хранения даты
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(3, 3) + EnterT.Text.Substring(0, 3) + EnterT.Text.Substring(6, 4);
+            }
+            else
+                strDate = EnterT.Text.Substring(0, 10);
+            DateTime d = new DateTime();//создаем перменную датетайм d (первая дата)
+            d = DateTime.Parse(strDate);//переводим строку в датетайм
 
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(14, 3) + EnterT.Text.Substring(11, 3) + EnterT.Text.Substring(17, 4);
+            }
+            else
+                strDate = EnterT.Text.Substring(11, 10);
+            DateTime b = new DateTime();//создаем перменную датетайм b (вторая дата)
+            b = DateTime.Parse(strDate);//переводим строку в датетайм
+            int a = DateTime.Compare(d, b); //переменная для определения правильности записи дат 
+            if (a > 0)
+            {
+                TimeSpan diff1 = d.Subtract(b); //ищем разницу между 2 датами
+                double time = Math.Abs(diff1.TotalMinutes); //переводим разницу в минуты
+                Result.Text = time.ToString() + " м";
+            }
+            else
+                if (a == 0)
+                Result.Text = "0 м";
+            else MessageBox.Show("Ошибка! Первая дата раньше второй!");
         }
 
         private void ResMonth_Click(object sender, EventArgs e)
@@ -299,7 +356,35 @@ namespace Сalculator
 
         private void ResHours_Click(object sender, EventArgs e)
         {
+            string strDate;//переменная для временного хранения даты
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(3, 3) + EnterT.Text.Substring(0, 3) + EnterT.Text.Substring(6, 4);
+            }
+            else
+                strDate = EnterT.Text.Substring(0, 10);
+            DateTime d = new DateTime();//создаем перменную датетайм d (первая дата)
+            d = DateTime.Parse(strDate);//переводим строку в датетайм
 
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(14, 3) + EnterT.Text.Substring(11, 3) + EnterT.Text.Substring(17, 4);
+            }
+            else
+                strDate = EnterT.Text.Substring(11, 10);
+            DateTime b = new DateTime();//создаем перменную датетайм b (вторая дата)
+            b = DateTime.Parse(strDate);//переводим строку в датетайм
+            int a = DateTime.Compare(d, b); //переменная для определения правильности записи дат 
+            if (a > 0)
+            {
+                TimeSpan diff1 = d.Subtract(b); //ищем разницу между 2 датами
+                double time = Math.Abs(diff1.TotalHours); //переводим разницу в часы
+                Result.Text = time.ToString() + " ч";
+            }
+            else
+                if (a == 0)
+                Result.Text = "0 ч";
+            else MessageBox.Show("Ошибка! Первая дата раньше второй!");
         }
 
         private void ResWeeks_Click(object sender, EventArgs e)
@@ -387,6 +472,16 @@ namespace Сalculator
             {
                 MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
             }
+        }
+
+        private void Result_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnterT_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
