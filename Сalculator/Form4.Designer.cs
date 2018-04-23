@@ -36,25 +36,29 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox1.Location = new System.Drawing.Point(188, 123);
+            this.textBox1.Location = new System.Drawing.Point(70, 52);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 60);
+            this.textBox1.Size = new System.Drawing.Size(94, 29);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(130, 53);
+            this.label1.Location = new System.Drawing.Point(49, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 32);
+            this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Введите количество дней";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(188, 259);
+            this.button1.Location = new System.Drawing.Point(70, 109);
+            this.button1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 67);
+            this.button1.Size = new System.Drawing.Size(92, 28);
             this.button1.TabIndex = 2;
             this.button1.Text = "Далее";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,12 +66,13 @@
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 491);
+            this.ClientSize = new System.Drawing.Size(232, 206);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Form4";
             this.Text = "Form4";
             this.ResumeLayout(false);
