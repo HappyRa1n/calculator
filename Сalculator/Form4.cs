@@ -10,26 +10,19 @@ using System.Windows.Forms;
 
 namespace Сalculator
 {
-    public partial class Form3 : Form
-    {        
+    public partial class Form4 : Form
+    {
         Form1 frm;
-        public Form3()
+        public Form4()
         {
             InitializeComponent();
-            
         }
-        public Form3(Form1 f)
+        public Form4(Form1 f)
         {
             InitializeComponent();
             frm = f;//связь с первой формой
-
-
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void button1_Click(object sender, EventArgs e )
+        private void button1_Click(object sender, EventArgs e)
         {
             string st;
             st = textBox1.Text;
@@ -38,16 +31,16 @@ namespace Сalculator
                 int t = Convert.ToInt32(st);
                 if (t >= 1)
                 {
-                        frm.EnterText(textBox1.Text+"м");//вводим месяц в основную форму
-                        frm.ClickResDate(true);
-                        frm.ClickEntDate(false);
-                        frm.ClickEnterDays(false);
-                        frm.ClickEnterMonth(false);
+                    frm.EnterText(textBox1.Text + "д");//вводим дни в основную форму
+                    frm.ClickResDate(true);
+                    frm.ClickEntDate(false);
+                    frm.ClickEnterDays(false);
+                    frm.ClickEnterMonth(false);
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка!Введено не натуральное число месяцев!");//вызываем окно ошибки
+                    MessageBox.Show("Ошибка!Введено не натуральное число дней!");//вызываем окно ошибки
                 }
             }
             catch (System.OverflowException)
@@ -58,9 +51,6 @@ namespace Сalculator
             {
                 MessageBox.Show("Ошибка! Вы ввели не число!");
             }
- 
         }
-
-        
     }
 }
