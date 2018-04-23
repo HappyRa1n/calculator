@@ -269,7 +269,33 @@ namespace Сalculator
 
         private void ResDays_Click(object sender, EventArgs e)
         {
+            string strDate;//переменная для временного хранения даты
 
+            string strDate2;
+            if (TypeData == false)
+            {
+                strDate = EnterT.Text.Substring(3, 3) + EnterT.Text.Substring(0, 3) + EnterT.Text.Substring(6, 4);
+                strDate2= EnterT.Text.Substring(14, 3)+ EnterT.Text.Substring(11, 3)+EnterT.Text.Substring(17, 4) ;
+            }
+            else
+            {
+                strDate = EnterT.Text.Substring(0, 10);
+                strDate2= EnterT.Text.Substring(11, 10);
+            }
+            DateTime date1 = new DateTime();//создаем перменную датетайм
+            DateTime date2 = new DateTime();//создаем перменную датетайм
+            date1 = DateTime.Parse(strDate);//переводим строку в датетайм
+            date2 = DateTime.Parse(strDate2);//переводим строку в датетайм
+            TimeSpan f;
+            try
+            {
+                f = date1.Subtract(date2);
+                Result.Text = Convert.ToString(f.Days)+"Д";
+            }
+            catch (System.ArgumentOutOfRangeException)//ошибка выхода за пределы возможных  дат
+            {
+                MessageBox.Show("Ошибка! Ответ выходит за пределы реализованного диапазона дат");
+            }
         }
     }
 }
