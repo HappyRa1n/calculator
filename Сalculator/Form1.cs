@@ -286,7 +286,7 @@ namespace Сalculator
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка! Первая дата меньше второй!");
+                    MessageBox.Show("Ошибка! Первая дата раньше второй!");
                 }
 
 
@@ -336,7 +336,7 @@ namespace Сalculator
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка! Первая дата меньше второй!");
+                    MessageBox.Show("Ошибка! Первая дата раньше второй!");
                 }
 
 
@@ -378,7 +378,7 @@ namespace Сalculator
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка! Первая дата меньше второй!");
+                    MessageBox.Show("Ошибка! Первая дата раньше второй!");
                 }
                
                 
