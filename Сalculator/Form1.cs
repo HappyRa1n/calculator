@@ -270,7 +270,10 @@ namespace Сalculator
                 double time = Math.Abs(diff1.TotalSeconds); //переводим разницу в секунды
                 Result.Text = time.ToString() + " с";
             }
-            else MessageBox.Show("Ошибка! Первая дата раньше второй!");
+            else
+                if (a == 0)
+                Result.Text ="0 с";
+                else MessageBox.Show("Ошибка! Первая дата раньше второй!");
         }
 
         private void ResMinutes_Click(object sender, EventArgs e)
@@ -300,6 +303,9 @@ namespace Сalculator
                 double time = Math.Abs(diff1.TotalMinutes); //переводим разницу в минуты
                 Result.Text = time.ToString() + " м";
             }
+            else
+                if (a == 0)
+                Result.Text = "0 м";
             else MessageBox.Show("Ошибка! Первая дата раньше второй!");
         }
 
@@ -375,6 +381,9 @@ namespace Сalculator
                 double time = Math.Abs(diff1.TotalHours); //переводим разницу в часы
                 Result.Text = time.ToString() + " ч";
             }
+            else
+                if (a == 0)
+                Result.Text = "0 ч";
             else MessageBox.Show("Ошибка! Первая дата раньше второй!");
         }
 
