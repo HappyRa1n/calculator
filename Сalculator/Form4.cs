@@ -52,5 +52,10 @@ namespace Сalculator
                 MessageBox.Show("Ошибка! Вы ввели не число!");
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
